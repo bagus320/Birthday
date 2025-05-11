@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff5f5;
+  font-family: "Comic Neue", cursive;
+  color: #ff6b8b;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #ffebee;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(255, 107, 139, 0.2);
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 3.5rem;
+  margin: 0;
+  color: #ff4081;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-family: "Indie Flower", cursive;
+  font-size: 2rem;
+  color: #ff6b8b;
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.photo-placeholder {
+  background-color: #ffecef;
+  border-radius: 15px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.photo-placeholder:hover {
+  transform: scale(1.05);
+}
+
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.message-section {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  margin: 30px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sticker {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.sticker:hover {
+  transform: rotate(15deg) scale(1.2);
+}
+
+.interactive-element {
+  background-color: #e95160;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-family: "Comic Neue", cursive;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: all 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.interactive-element:hover {
+  background-color: #b11632;
+  transform: translateY(-5px);
+}
+
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: #f00;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.heart {
+  position: fixed;
+  pointer-events: none;
+  font-size: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-family: "Indie Flower", cursive;
+  font-size: 1.5rem;
+  color: #ff6b8b;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .photo-gallery {
+    grid-template-columns: 1fr;
+  }
+}
